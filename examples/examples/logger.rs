@@ -52,8 +52,8 @@ impl logger::Logger for Timings {
 		println!("[Logger::on_call] method: '{}', params: {:?}, kind: {}", name, params, kind);
 	}
 
-	fn on_result(&self, name: &str, succeess: bool, started_at: Self::Instant, _t: TransportProtocol) {
-		println!("[Logger::on_result] '{}', worked? {}, time elapsed {:?}", name, succeess, started_at.elapsed());
+	fn on_result(&self, name: &str, success: bool, started_at: Self::Instant, _t: TransportProtocol) {
+		println!("[Logger::on_result] '{}', worked? {}, time elapsed {:?}", name, success, started_at.elapsed());
 	}
 
 	fn on_response(&self, result: &str, started_at: Self::Instant, _t: TransportProtocol) {
